@@ -132,8 +132,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Candidate.cpp" />
-    <ClCompile Include="fileIO.cpp" />
     <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dummy_results.csv" />
+    <None Include="ms.csv" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
