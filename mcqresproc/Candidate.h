@@ -14,6 +14,7 @@ private:
 	string classId;
 	int classNum;
 	vector<string> answers;
+	int mark;
 
 protected:
 	//	Set
@@ -30,6 +31,10 @@ public:
 	string getClassId();
 	int getClassNum();
 	vector<string> getAnswers();
+	int getMark();
+
+	//	Set mark
+	void setMark(int a);
 
 	Candidate();
 	Candidate(string a, string b, string c, int d, vector<string> e);

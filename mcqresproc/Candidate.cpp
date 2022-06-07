@@ -6,6 +6,7 @@ void Candidate::setLastName(string a) { this->lastName = a; }
 void Candidate::setClassId(string a) { this->classId= a; }
 void Candidate::setClassNum(int a) { this->classNum = a; }
 void Candidate::setAnswers(vector<string> a) { this->answers = a; }
+void Candidate::setMark(int a) { this->mark = a; }
 
 //	Get
 string Candidate::getFirstName() { return this->firstName; }
@@ -13,6 +14,7 @@ string Candidate::getLastName() { return this->lastName; }
 string Candidate::getClassId() { return this->classId; }
 int Candidate::getClassNum() { return this->classNum; }
 vector<string> Candidate::getAnswers() { return this->answers; }
+int Candidate::getMark() { return this->mark; }
 
 //	Constructors
 Candidate::Candidate() {
@@ -21,6 +23,7 @@ Candidate::Candidate() {
 	setClassId("");
 	setClassNum(0);
 	setAnswers(vector<string> (40,""));
+	setMark(0);
 }
 
 Candidate::Candidate(string a, string b, string c, int d, vector<string> e) {
@@ -29,4 +32,5 @@ Candidate::Candidate(string a, string b, string c, int d, vector<string> e) {
 	setClassId(c);
 	setClassNum(d);
 	setAnswers(e);
+	setMark(0);
 }

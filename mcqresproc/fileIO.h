@@ -4,7 +4,7 @@
 
 using namespace std;
 
-vector<Candidate> readData(string fileName) {
+vector<Candidate> loadOMRData(string fileName) {
 	vector<Candidate> data;
 	bool ifContinue = true;
 	string dump;
@@ -30,7 +30,6 @@ vector<Candidate> readData(string fileName) {
 		vector<string> tempAnswer;
 
 		getline(dataFile, tempLine);
-		//getline(dataFile, emptyLine);
 		if (tempLine == "") { 
 			ifContinue = false;
 			break;
@@ -45,15 +44,35 @@ vector<Candidate> readData(string fileName) {
 				if (i == 4) { tempFirstName = temp; }
 				else if (i == 5) { tempLastName = temp; }
 				else if (i == 6) { tempClassId = temp; }
-				else if (i == 7) { tempClassNum = stoi(temp); }
+				else if (i == 7) { tempClassNum = stoi(temp) + 1; }
 				else {
 					tempAnswer.push_back(temp);
 				}
 			}
 		}
+		tempAnswer[tempAnswer.size() - 1].erase(size(tempAnswer[tempAnswer.size() - 1]) - 1, 1);
 		data.push_back(Candidate(tempFirstName, tempLastName, tempClassId, tempClassNum, tempAnswer));
 		tempAnswer.clear();
 	}
 
 	return data;
 }
+
+vector<string> loadMS() {
+	vector<string> ms;
+	string temp;
+
+	fstream msFile;
+	msFile.open("ms.csv", ios::in);
+
+	for (int i = 0; i < 39; ++i) {
+		getline(msFile, temp, ',');
+		ms.push_back(temp);
+	}
+	getline(msFile, temp, '\0');
+	temp.erase(size(temp) - 1, 1);
+	ms.push_back(temp);
+
+	return ms;
+}
+

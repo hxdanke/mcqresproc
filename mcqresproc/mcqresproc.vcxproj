@@ -129,13 +129,14 @@
   <ItemGroup>
     <ClInclude Include="Candidate.h" />
     <ClInclude Include="fileIO.h" />
+    <ClInclude Include="marking.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Candidate.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="dummy_results.csv" />
+    <None Include="dummy.csv" />
     <None Include="ms.csv" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1,6 +1,7 @@
 #include <iostream>
 #include "fileIO.h"
 #include "Candidate.h"
+#include "marking.h"
 
 using namespace std;
 
@@ -11,8 +12,13 @@ int main() {
 	string fileName;
 	cin >> fileName;
 
-	vector<Candidate> data = readData(fileName);
-	cout << "Data loaded";
+	vector<Candidate> data = loadOMRData(fileName);
+	vector<string> ms = loadMS();
+
+	//	Marking
+	for (int i = 0; i < data.size(); ++i) {
+		data[i].setMark(marking(data[i].getAnswers(), ms));
+	}
 
 	return 0;
 }

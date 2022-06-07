@@ -21,6 +21,9 @@
     <ClInclude Include="fileIO.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="marking.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Candidate.cpp">
@@ -31,10 +34,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="dummy_results.csv">
+    <None Include="ms.csv">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="ms.csv">
+    <None Include="dummy.csv">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
