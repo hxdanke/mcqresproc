@@ -13,6 +13,7 @@ private:
 	string lastName;
 	string classId;
 	int classNum;
+	string className;
 	vector<string> answers;
 	int mark;
 
@@ -22,6 +23,7 @@ protected:
 	void setLastName(string a);
 	void setClassId(string a);
 	void setClassNum(int a);
+	void setClassName(string a, int b);
 	void setAnswers(vector<string> a);
 
 public:
@@ -30,6 +32,7 @@ public:
 	string getLastName();
 	string getClassId();
 	int getClassNum();
+	string getClassName();
 	vector<string> getAnswers();
 	int getMark();
 
@@ -40,4 +43,3 @@ public:
 	Candidate(string a, string b, string c, int d, vector<string> e);
 
 };
-
